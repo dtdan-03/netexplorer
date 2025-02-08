@@ -1,5 +1,5 @@
 # IniKiwi's netexplorer
-icence: gpl-3.0
+licence: gpl-3.0
 ## use   
 `inikiwi-netexplorer [-r <requests>] [-j <threads>] [-t <timeout>] [--hide-fail] [--hide-access-denied] [--hide-skipped] [--raw-output <file>] [--protocol-map <file>] <task>`
 ### tasks
@@ -53,9 +53,9 @@ local mylogger = Logger.new(use_stdout, logfile)
 ### methods
 | function | arguments | action |
 |---|---|---|
-| `set_hide_fail(v)` | `v:bool` bollean value.| hide requests whit `FAIL` status. |
-| `set_hide_skipped(v)` | `v:bool` bollean value.| hide requests whit `SKIPPED` status. |
-| `set_hide_access_denied(v)` | `v:bool` bollean value.| hide requests whit `ACCESS DENIED` status. |
+| `set_hide_fail(v)` | `v:bool` boolean value.| hide requests with `FAIL` status. |
+| `set_hide_skipped(v)` | `v:bool` boolean value.| hide requests with `SKIPPED` status. |
+| `set_hide_access_denied(v)` | `v:bool` boolean value.| hide requests with `ACCESS DENIED` status. |
 | `log(msg)` | `msg:string` string to display and log | print message to stdout (if activated) and save it in the log file (if selected) |
 
 ## ProtocolMap
@@ -68,7 +68,7 @@ myprotocolmap:import("./protocolmap.txt")
 |---|---|---|
 | `import(file)` | `file:string` file path.| import protocolmap from file |
 | `clear()` | | clear the protocol map |
-| `set_hide_access_denied(v)` | `v` bollean value.| hide requests whit `ACCESS DENIED` status. |
+| `set_hide_access_denied(v)` | `v` boolean value.| hide requests with `ACCESS DENIED` status. |
 | `set(port, protocols)` | `port:int` the port.  `protocols:string` space separated protocols | attribute protocols to a given port. |
 | `get(port)` | `port:int` the port. | return protocol list (string) for the given port. |
 
@@ -107,5 +107,5 @@ end)
 | `get_header(name)` | `name:string` the http header name. | return the HTTP header value as a string. |
 | `get_full_header()` |  | return the full http header as a string. |
 | `get_version()` |  | return the HTTP version tag as a string. |
-| `get_content_size()` |  | return the size of the received content as a int. |
-| `get_content()` |  | return the the received content as a string. (the content can be a binary file!)|
+| `get_content_size()` |  | return the size of the received content as an integer. |
+| `get_content()` |  | return the received content as a string. (the content can be a binary file!)|
